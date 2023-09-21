@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+
+  color: #ffffff;
+  background-color: #5c64ff;
+  
+}
+
+header {
+  background-color: #5c64ff;
+  color: white
+}
+
+a {
+  color: white
+}
+
+.header{
+  text-align: center;
+
+  color: #ffffff;
+  padding-bottom: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+  
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  padding: 10px;
+
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+}
+
+.twocol {
+  width:50%;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+
+.fivecol {
+  width:20%;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+
+.sevencol {
+  width:14%;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
