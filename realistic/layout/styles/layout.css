@@ -129,3 +129,10 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #copyright{padding:15px 0; font-size:12px; border-top:1px solid #999999;}
 #copyright a{color:#787878; background-color:#E0E0E0;}
 #copyright p{margin:0; padding:0;}
+
+/*================= CUSTOM ================*/
+#fourzerofour{font-size: 60px;}
+
+#bttn{width:170px; height:26px; padding:4px 0; text-transform:uppercase; color:#FFFFFF; background-color:#565656; border-color:#C3C3C3; cursor:pointer; font-weight:bold;}
+#bttn{text-align: center; margin:0 5px 0 0; border:1px solid #C3C3C3; font-size:12px;}
+#bttn{margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
