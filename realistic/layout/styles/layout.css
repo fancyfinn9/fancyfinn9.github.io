@@ -136,3 +136,4 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #bttn{width:170px; height:26px; padding:4px 0; text-transform:uppercase; color:#FFFFFF; background-color:#565656; border-color:#C3C3C3; cursor:pointer; font-weight:bold;}
 #bttn{text-align: center; margin:0 5px 0 0; border:1px solid #C3C3C3; font-size:12px;}
 #bttn{margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+#bttn{font-family: Georgia;} 

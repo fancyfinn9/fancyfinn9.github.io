@@ -1,5 +1,6 @@
-document.getElementById('pgfooter').innerHTML ='<div class="wrapper"><div id="footer"><div class="latestgallery"><h2>Latest Projects</h2><ul><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li class="last"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li><li class="last"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li></ul></div><div class="footbox"><h2>Latest From The Blog</h2><ul><li><a href="#">Lorem ipsum dolor</a></li><li><a href="#">Suspendisse in neque</a></li><li><a href="#">Praesent et eros</a></li><li><a href="#">Lorem ipsum dolor</a></li><li><a href="#">Suspendisse in neque</a></li><li class="last"><a href="#">Praesent et eros</a></li></ul></div><div class="footbox last"><h2>Keep In Touch</h2> <ul><li><a href="#">Discord</a></li><li><a href="https://donphan.social/@fancyfinn9" target="_blank">Mastodon</a></li><li><a href="https://github.com/fancyfinn9" target="_blank">GitHub</a></li><li><a href="https://www.chess.com/member/fancyfinn9" target="_blank">Chess.com</a></li><li><a href="#">Email</a></li><li class="last"><a href="#">Sub-Etha</a></li></ul></div><br class="clear" /></div></div><!-- ####################################################################################################### --><div class="wrapper"><div id="copyright"><p class="fl_left">Copyright &copy; 2023 fancyfinn9</p><p class="fl_right">Design by <a href="http://www.os-templates.com/" title="Free Website Templates" target="_blank">OS Templates</a></p><br class="clear" /></div></div>';
+document.getElementById('pgfooter').innerHTML ='<div class="wrapper"><div id="footer"><div class="latestgallery"><h2>Random Quote</h2><ul><p id="quote">"Randomness is never a good idea" - fancyfinn9</p></ul></div><div class="footbox"><h2>Some random links</h2><ul><li><a href="#" id="rl1">Lorem ipsum dolor</a></li><li><a href="#" id="rl2">Suspendisse in neque</a></li><li><a href="#" id="rl3">Praesent et eros</a></li><li><a href="#" id="rl4">Lorem ipsum dolor</a></li><li class="last"><a href="#" id="rl5">Suspendisse in neque</a></li></ul></div><div class="footbox last"><h2>Keep In Touch</h2> <ul><li><a href="#">Discord</a></li><li><a href="https://donphan.social/@fancyfinn9" target="_blank">Mastodon</a></li><li><a href="https://github.com/fancyfinn9" target="_blank">GitHub</a></li><li><a href="https://www.chess.com/member/fancyfinn9" target="_blank">Chess.com</a></li><li class="last"><a href="#">Email</a></li></ul></div><br class="clear" /></div></div><!-- ####################################################################################################### --><div class="wrapper"><div id="copyright"><p class="fl_left">Copyright &copy; 2023 fancyfinn9</p><p class="fl_right">Design by <a href="http://www.os-templates.com/" target="_blank">OS Templates</a></p><br class="clear" /></div></div>';
 
+// Random subtitle (at top of page)
 var r = new Array ();
 r.push("<b>*trumpet fanfare sounds*</b>");
 r.push("THE ONE AND ONLY");
@@ -20,6 +21,30 @@ r.push("Writer dude");
 r.push("*crowd applauds*");
 r.push("Now available in Australia!");
 r.push("Only &euro;99.99!");
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+r = shuffle(r);
+var i = Math.floor(r.length*Math.random());
+document.getElementById('ticker').innerHTML = r[i];
+
+// Random quote (footer)
+var q = new Array ();
+q.push("It's not a bug&#59; it's an undocumented feature. - Anonymous");
+q.push("Hi, I'm Magnus Carlsen. - Magnus Carlsen");
+q.push("Code is like humor. When you have to explain it, it's bad. - Cory House");
+q.push("Programmers seem to be changing the world. It would be a relief, for them and for all of us, if they knew something about it. - Ellen Ullman");
+q.push("Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program. - Linus Torvalds");
+q.push("When you see a good move, look for a better one - Emanuel Lasker");
+q.push("All I want to do, ever, is just play Chess - Bobby Fischer");
+q.push("Unfortunately I'm still not a fashion expert. - Magnus Carlsen");
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -32,9 +57,45 @@ function shuffle(array) {
 
   return array;
 }
+q = shuffle(q);
+var i = Math.floor(q.length*Math.random());
+document.getElementById('quote').innerHTML = q[i];
 
-r = shuffle(r);
+function remove(item, array) {
+  var index = array.indexOf(item);
+  if (index !== -1) {
+    array.splice(index, 1);
+  }
+  return array;
+}
 
-var i = Math.floor(r.length*Math.random());
+// Random links (footer)
+var l = new Array ();
+l.push('<a href="https://google.ie" target="_blank">Google (the best search engine)</a>');
+l.push('<a href="https://wiimmfi.de" target="_blank">Wiimmfi (play Wii games online again)</a>');
+l.push('<a href="https://replit.com/@fancyfinn9" target="_blank">Replit (code from your browser)</a>');
+l.push('<a href="https://chess.com/members/fancyfinn9" target="_blank">Chess.com (play chess online)</a>');
+l.push('<a href="https://lichess.org/@/fancyfinn9" target="_blank">Lichess (play chess online)</a>');
+l.push('<a href="https://fancyfinn9.github.io" target="_blank">This page (because why not?)</a>');
+l.push('<a href="https://donphan.social/@fancyfinn9" target="_blank">donphan.social (the best Mastodon instance)</a>');
+l.push('<a href="https://github.com/fancyfinn9" target="_blank">GitHub (if you\'re a programmer you should already know this)</a>');
+l.push('<a href="https://pokemonaaah.net/" target="_blank">Pok&#233;mon Aaah! (best Pok&#233;mon site)</a>');
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
 
-document.getElementById('ticker').innerHTML = r[i];
+  return array;
+}
+it = 1;
+while (it<7) {
+  l = shuffle(l);
+  var i = Math.floor(l.length*Math.random());
+  document.getElementById('rl'+it).innerHTML = l[i];
+  it++;
+  l = remove(l[i], l);
+}

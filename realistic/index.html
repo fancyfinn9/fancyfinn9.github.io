@@ -31,10 +31,10 @@ jQuery(function () {
       <div class="block"><img src="images/icons/user.ico" width="46" height="46" alt="" /><strong>About Me</strong>
         <p>Hi there! I'm fancyfinn9, a programmer, writer, musician... generally a Finn-of-all-trades. I specialize in making backends and random tools, mainly in Python.</p>
       </div>
-      <div class="block"><img src="images/icons/star.ico" width="46" height="46" alt="" /><strong>My Skills</strong>
+      <div class="block"><img src="images/icons/star.ico" width="46" height="46" alt="" onclick="doCoolThing();"/><strong>My Skills</strong>
         <p>My programming knowledge includes Python, JavaScript, and also some HTML and CSS. I often work with image editing in GIMP, too, and to top this all off I also play the trumpet!</p>
       </div>
-      <div class="block last"><img src="images/icons/document.ico" width="46" height="46" alt="" /><strong>Projects</strong>
+      <div class="block last"><img src="images/icons/document.ico" width="46" height="46" alt="" /><strong><span onclick="doAnotherCoolThing();">Projects</span></strong>
         <p>More often than not I work on miscellanious programming projects, which you can follow on <a href="https://github.com/fancyfinn9" target="_blank">my GitHub</a>. I also write on <a href="https://pokemonaaah.net/" target="_blank">Pok&#233;mon Aaah!</a>, so definitely check them out!</p>
       </div>
       <!--
@@ -76,5 +76,21 @@ jQuery(function () {
 <!-- ####################################################################################################### -->
 <div id="pgfooter"></div>
 <script src="footer.js"></script>
+<script type="text/javascript">
+	function doCoolThing() {
+		var timestamp = Number(new Date());
+		var date1 = new Date(timestamp);
+		timestamp += 6.048e+8;
+		var date2 = new Date(timestamp);
+		alert(date1+"\n+1 week\n"+date2);
+	}
+	function doAnotherCoolThing() {
+		if (confirm("FATAL ERROR: API responded with HTTP code 418\nPlease press OK to report to developers")) {
+		  alert("Reported to developers, thank you!");
+		} else {
+		  window.location.assign("js.html")
+		}
+	}
+</script>
 </body>
 </html>

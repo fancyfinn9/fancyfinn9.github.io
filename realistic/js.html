@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Realistic
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>fancyfinn9 | secret page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<!-- Superfish Menu -->
+<script type="text/javascript" src="layout/scripts/superfish/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="layout/scripts/superfish/superfish.js"></script>
+<script type="text/javascript">
+jQuery(function () {
+    jQuery('ul.nav').superfish();
+});
+</script>
+<!-- / Superfish Menu -->
+</head>
+<body id="top">
+<div id="pgheader"></div>
+<script src="header.js"></script>
+<div class="wrapper">
+  <div class="container">
+    <div class="whitebox" id="hpage_services">
+      <div style="text-align: center;">
+        <h1 id="fourzerofour">Shhh!</h1>
+        <h3 width="50px">You have reached the secret page, the center of all my secret operations!</h3>
+        <div class="clear"></div>
+        <p>Well, uh, it's not actually that exciting, but you did get here nonetheless. Feel free to browse around and check out some random stuff I have here!<br>Some of the projects will cause the page to disappear, in that case just refresh the page to get back here, ok?<br>(yes, you do need to click on the labels to see them)</p>
+        <div class="clear"><br></div>
+        <h4 onclick="magictrick();">A cool magic trick</h4>
+        <h4 onclick="clock();">Your own personal clock</h4>
+        <h4 onclick="hack();">Everything I know about you</h4>
+      </div>
+      <div class="clear"></div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div id="pgfooter"></div>
+<script src="footer.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  function magictrick() {
+    document.getElementById("top").innerHTML = "<h1 style='text-align: center;'>Voila!</h1>"
+    alert("Poof, and it's gone");
+  }
+  function clock() {
+    var timestamp = Number(new Date());
+    var date1 = new Date(timestamp);
+    document.getElementById("top").innerHTML = "<h1 style='text-align: center;'>"+date1+"</h1>";
+    function doit() {
+      setTimeout(function(){
+        timestamp = Number(new Date());
+        date1 = new Date(timestamp);
+        document.getElementById("top").innerHTML = "<h1 style='text-align: center;'>"+date1+"</h1>";
+        doit();
+      }, 1000);
+    }
+    doit();
+  }
+  function hack() {
+    document.getElementById("top").innerHTML = "<style>body{text-align: center;}</style><div id='ip'></div><div id='browser'></div>"
+    $.getJSON("https://api.ipify.org?format=json", function (data) {
+      document.getElementById("ip").innerHTML = document.getElementById("ip").innerHTML + "<h1>Your IP: "+data.ip+"</h1>";});
+    document.getElementById("browser").innerHTML = document.getElementById("browser").innerHTML + "<h1>Platform: "+navigator.platform+"</h1>"+"<h1>Browser name: "+navigator.appName+"</h1>"+"<h1>Browser platform: "+navigator.product+"</h1>"+"<h1>Browser version: "+navigator.appVersion+"</h1>"+"<h1>Browser language: "+navigator.language+"</h1>"+"<h1>Browser online: "+navigator.onLine+"</h1>"+"<h1>Cookies enabled: "+navigator.cookieEnabled+"</h1>"+"<h1>User-agent: "+navigator.userAgent+"</h1>";
+    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      document.getElementById("browser").innerHTML = document.getElementById("browser").innerHTML + "<h1>Your location: unavailable</h1>";
+    }
+    function showPosition(position) {
+      document.getElementById("browser").innerHTML = document.getElementById("browser").innerHTML + "<a href='#'><u><h1 onclick='globe("+position.coords.latitude+","+position.coords.longitude+");'>Your location: "+"Latitude: " + position.coords.latitude +
+      " Longitude: " + position.coords.longitude;+"</h1></a></u>";
+    }
+  }
+  function globe(pos1, pos2) {
+    
+  }
+</script>
+</body>
+</html>
