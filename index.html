@@ -1,46 +1,96 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Realistic
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>fancyfinn9 | Home</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<title>fancyfinn9 | home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<!-- Superfish Menu -->
+<script type="text/javascript" src="layout/scripts/superfish/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="layout/scripts/superfish/superfish.js"></script>
+<script type="text/javascript">
+jQuery(function () {
+    jQuery('ul.nav').superfish();
+});
+</script>
+<!-- / Superfish Menu -->
 </head>
-
-<body>
-  <header>
-    <img src="profile-pic.png" id="logo">
-    <h1 class="header">fancyfinn9</h1>
-  </header>
-  <div id="content">
-    <p><br></p>
-    <h2>Hey, I'm fancyfinn9!</h2>
-    <h4>I'm an amateur* programmer, specializing in Python, backends, and spending too much time trying to make that one thing work.</h4>
-    <p style="font-size: 10pt">* the unpaid defenition</p>
-
-    <h2><br>Some of my projects</h2>
-
-
-      <p><b><a href="https://fancyfinn9.github.io">This page (HTML, CSS)</a></b><br>Believe it or not, it took me a while. Because I am terrible with CSS.</p>
-      <p><b><a href="https://github.com/fancyfinn9/pl_scraper">pl_scraper (Python)</a></b><br>It scrapes data from the Premier Leage website.</p>
-      <p><b><a href="https://fancyfinn9.github.io/pokemoncards">Custom Pokemon cards (GIMP)</a></b><br>Cool, right? I'm still practicing, though. But they're getting better!</p>
-      <!--<p><b><a href="https://fancyfinn9.github.io/fancynet">The FancyNet (HTML, CSS)</a></b><br>A list of every website I'm found on. A bit boring. But cool. Yeah.</p>-->
-
-    
-  <h2><br>Get in touch</h2>
-    <p><b>Discord</b><br>@fancyfinn9</p>
-    <p><b>Email</b><br>N/A (sorry about that)</p>
-    <p><b>Other</b><br><a rel="me" href="https://donphan.social/@fancyfinn9">Mastodon</a></p>
+<body id="top">
+<div id="pgheader"></div>
+<script src="header.js"></script>
+<div class="wrapper">
+  <div class="container">
+    <div class="whitebox" id="hpage_services">
+      <div class="block"><img src="images/icons/user.ico" width="46" height="46" alt="" /><strong>About Me</strong>
+        <p>Hi there! I'm fancyfinn9, a programmer, writer, musician... generally a Finn-of-all-trades. I specialize in making backends and random tools, mainly in Python.</p>
+      </div>
+      <div class="block"><img src="images/icons/star.ico" width="46" height="46" alt="" onclick="doCoolThing();"/><strong>My Skills</strong>
+        <p>My programming knowledge includes Python, JavaScript, and also some HTML and CSS. I often work with image editing in GIMP, too, and to top this all off I also play the trumpet!</p>
+      </div>
+      <div class="block last"><img src="images/icons/document.ico" width="46" height="46" alt="" /><strong><span onclick="doAnotherCoolThing();">Projects</span></strong>
+        <p>More often than not I work on miscellanious programming projects, which you can follow on <a href="https://github.com/fancyfinn9" target="_blank">my GitHub</a>. I also write on <a href="https://pokemonaaah.net/" target="_blank">Pok&#233;mon Aaah!</a>, so definitely check them out!</p>
+      </div>
+      <!--
+      <div class="spacer">&nbsp;</div>
+      <div class="block"><img src="images/demo/46x46.gif" width="46" height="46" alt="" /><strong>Lorum ipsum dolor</strong>
+        <p>Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum. Metridiculis conseque quis iaculum aenean nunc aenean quis nam nis dui.</p>
+      </div>
+      <div class="block"><img src="images/demo/46x46.gif" width="46" height="46" alt="" /><strong>Lorum ipsum dolor</strong>
+        <p>Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum. Metridiculis conseque quis iaculum aenean nunc aenean quis nam nis dui.</p>
+      </div>
+      <div class="block last"><img src="images/demo/46x46.gif" width="46" height="46" alt="" /><strong>Lorum ipsum dolor</strong>
+        <p>Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum. Metridiculis conseque quis iaculum aenean nunc aenean quis nam nis dui.</p>
+      </div>-->
+      <div class="clear"></div>
+    </div>
+       <!-- ####################################################################################################### -->
+    <div id="hpage_latest">
+      <ul>
+        <li>
+          <div class="imgholder"><a href="https://github.com/fancyfinn9/pokemon-tcg-stats" target="_blank"><img src="images/thumbnails/github.png" width="260" alt="" style="object-fit: cover;"/></div>
+          <p><strong>GitHub - fancyfinn9/pokemon-tcg-stats</strong></p></a>
+          <p>A collection of Python scripts and tools for discovering stats about the Pokemon TCG</p>
+        </li>
+        <li>
+          <div class="imgholder"><a href="https://www.pokemonaaah.net/news/2023/11/pokemon-tcg-classic-overpriced/" target="_blank"><img src="images/thumbnails/pokemonaaah.png" width="260" alt="" style="object-fit: cover;"/></div>
+          <p><strong>Pokemon TCG Classic: Overpriced? | Pok&#233;mon Aaah! The Website</strong></p></a>
+          <p>Professor Finn and the (imaginary) team see if the Pokemon TCG Classic's price is actually a good one</p>
+        </li>
+        <li class="last">
+          <div class="imgholder"><a href="https://fancyfinn9.github.io"><img src="images/thumbnails/back.jpg" height="140" alt="" style="object-fit: cover;"/></div>
+          <p><strong>Back to main site</strong></p></a>
+          <p>While this theme for the website is still in development, some of you may not enjoy seeing a bunch of broken links and unfinished pages. If that sounds like you, feel free to whoosh back over to my old, boring, much-moderner-looking site.</p>
+        </li>
+      </ul>
+      <br class="clear" />
+    </div>
   </div>
-  <br><br><p>Copyright (c) 2023 fancyfinn9</p>
-  <p style="color: #5c64ff; padding: -15px;">If you found this, well done! :)</p>
-  
-  <script src="script.js"></script>
+</div>
+<!-- ####################################################################################################### -->
+<div id="pgfooter"></div>
+<script src="footer.js"></script>
+<script type="text/javascript">
+	function doCoolThing() {
+		var timestamp = Number(new Date());
+		var date1 = new Date(timestamp);
+		timestamp += 6.048e+8;
+		var date2 = new Date(timestamp);
+		alert(date1+"\n+1 week\n"+date2);
+	}
+	function doAnotherCoolThing() {
+		if (confirm("FATAL ERROR: API responded with HTTP code 418\nPlease press OK to report to developers")) {
+		  alert("Reported to developers, thank you!");
+		} else {
+		  window.location.assign("js.html")
+		}
+	}
+</script>
 </body>
-
 </html>
