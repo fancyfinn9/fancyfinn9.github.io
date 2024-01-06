@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Pok&#233;flute | Search results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="images/Techmania.css" type="text/css" />
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <img src="images/flute.png" id="himg"/>
+    <h1 id="logo-text">Pok<span class="gray"></span>&#233;flute</h1>
+    <h2 id="slogan">rescoring the well-known soundtracks</h2>
+    <div id="header-tabs">
+      <ul>
+        <li><a href="index.html"><span>Home</span></a></li>
+        <li id="current"><a href="#"><span>Search</span></a></li>
+        <li><a href="#"><span>Downloads</span></a></li>
+        <li><a href="#"><span>Services</span></a></li>
+        <li><a href="#"><span>Support</span></a></li>
+        <li><a href="#"><span>About</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="content-wrap">
+    <div id="main"> <a name="TemplateInfo"></a>
+      <h1>Search results</h1>
+      <p> Found <span id="samount">0</span> results in <span id="stime">0</span> seconds</p>
+      <div id="results"><h3>No results found</h3></div>
+      
+      
+    </div>
+    <div id="sidebar">
+      <h1>Sidebar Menu</h1>
+      <ul class="sidemenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#TemplateInfo">Template Info</a></li>
+        <li><a href="#SampleTags">Sample Tags</a></li>
+        <li><a href="#">More Free Templates</a></li>
+        <li><a href="#">Premium Templates</a></li>
+      </ul>
+      <h1>Site Partners</h1>
+      <ul class="sidemenu">
+        <li><a href="#">Dreamhost</a></li>
+        <li><a href="#">4templates</a></li>
+        <li><a href="#">TemplateMonster</a></li>
+        <li><a href="#">Fotolia.com</a></li>
+        <li><a href="#">Text Link Ads</a></li>
+      </ul>
+      <h1>Search</h1>
+      <form method="get" id="search" action="search.html">
+        <p>
+          <input name="q" class="textbox" type="text" />
+          <input class="searchbutton" value="Search" type="submit" />
+        </p>
+      </form>
+      <h1>Wise Words</h1>
+      <p>&quot;Criticism is something you can avoid easily by saying nothing, doing nothing, and being nothing&quot;</p>
+      <p class="align-right">- Aristotle</p>
+      <h1>Support Styleshout</h1>
+      <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small donation through the donate link on my website - it will be a great help and will surely be appreciated.</p>
+    </div>
+  </div>
+  <div id="footer"> <span id="footer-left">Copyright &copy; 2023 <a href="https://fancyfinn9.github.io"><strong>fancyfinn9</strong></a> | Design by <a href="http://www.styleshout.com/">styleshout</a></span> <span id="footer-right"> <a href="#">Home</a> | <a href="#">Sitemap</a> | <a href="#">Home</a> </span> </div>
+</div>
+<script type="text/javascript">
+var r = new Array ();
+r.push({title:"Game Freak Logo",time:"0:11",link:"music.html?id=game-freak-logo"});
+r.push({title:"Opening Movie",time:"0:16",link:"music.html?id=opening-movie"});
+r.push({title:"Title Theme",time:"1:37",link:"music.html?id=title-theme"});
+r.push({title:"Game Tutorial",time:"0:43",link:"music.html?id=game-tutorial"});
+r.push({title:"Welcome to the World of Pokemon!",time:"1:05",link:"music.html?id=welcome-to-the-world-of-pokemon"});
+
+document.addEventListener("DOMContentLoaded", function(){
+  time1 = Date.now();
+  var amount = 0;
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has('q')) {
+    if (searchParams.get('q') != "") {
+      if (searchParams.get('q').length > 2) {
+        r.forEach(include);
+
+        function include(value) {
+          if (value.title.toLowerCase().includes(searchParams.get('q').toLowerCase())){
+            if (document.getElementById("results").innerHTML == "<h3>No results found</h3>") {
+              document.getElementById("results").innerHTML = "";
+            }
+            document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + "<blockquote id='no'><p><b>"+value.title+"</b> ("+value.time+")<br><a href='"+value.link+"'>More information &rArr;</a></p></blockquote>";
+            amount++;
+          }
+        }
+        
+      } else {
+        document.getElementById("results").innerHTML = "<h3>Please enter at least 3 characters</h3>";
+      }
+    } else {
+      document.getElementById("results").innerHTML = "<h3>Please enter at least 3 characters</h3>";
+    }
+  } else {
+    document.getElementById("results").innerHTML = "<h3>Please enter at least 3 characters</h3>";
+  }
+  time2 = Date.now();
+  document.getElementById("samount").innerHTML = amount;
+  var time = time2-time1;
+  document.getElementById("stime").innerHTML = time / 1000;
+});
+</script>
+</body>
+</html>
