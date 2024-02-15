@@ -49,6 +49,10 @@ q.push("When you see a good move, look for a better one - Emanuel Lasker");
 q.push("All I want to do, ever, is just play Chess - Bobby Fischer");
 q.push("Unfortunately I'm still not a fashion expert. - Magnus Carlsen");
 q.push("I've run out of quotes. - fancyfinn9");
+q.push("A Caterpie may change into a Butterfree, but the heart that beats inside remains the same. – Brock Harrison");
+q.push("Make your wonderful dream a reality; it will become your truth. If anyone can, it’s you. – N, Pokemon Black/White");
+q.push("I’m too young for math! – NPC, Pokemon Sun and Moon.");
+q.push("It’s more important to master the cards you’re holding than to complain about the ones your opponent was dealt. — Grimsley");
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
