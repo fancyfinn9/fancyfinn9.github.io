@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Realistic
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>fancyfinn9 | blog | creating a sendit clone</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
+<!-- Superfish Menu -->
+<script type="text/javascript" src="../layout/scripts/superfish/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="../layout/scripts/superfish/superfish.js"></script>
+<script type="text/javascript">
+jQuery(function () {
+    jQuery('ul.nav').superfish();
+});
+</script>
+<!-- / Superfish Menu -->
+</head>
+<body id="top">
+<div id="pgheader"></div>
+<script src="../header.js"></script>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div class="container">
+    <div class="whitebox" style="color: black; font-size: 14px;"> 
+      <!-- ####################################################################################################### -->
+      <h1 style="font-size: 30px;">Creating a sendit clone</h1>
+      <h3>How I <s>toppled</s> tried to topple their dominion</h3>
+      <hr>
+      <p>Before we begin, I think it is necessary to explain what sendit is. sendit is an app made to play games and activites on your Snapchat story, designed to allow your friends to interact with them. The most popular is probably their "ask me anything" game in which any of your friends can submit an anonymous question, and you can answer these questions on your story.</p>
+      <p>While it all seems great, there's just one flaw. With there being no alternatives to go to, sendit got a little bit greedy. They introduced more and more features, numerous in-app purchases and restricted multiple features behind their subscription. The app has also become unreliable, with bots asking questions in ask me anythings and no definitive way of telling what is a genuine question.</p>
+      <p>I decided that enough was enough. I would attempt to dethrone sendit and give the people of the world a better alternatives.</p>
+      <p>So, without further ado, I decided that I would try to include the following in my sendit clone:</p>
+      <ul>
+        <li>Log in with Snapchat (to make it feel more integrated)</li>
+        <li>Create "ask me anything" game and add to story with sticker</li>
+        <li>Collect responses through link</li>
+        <li>Send a notification when a response arrives</li>
+        <li>Answer questions on story</li>
+      </ul>
+      <p>To start this journey off I needed to decide on a few things. What programming language would I use, what external services would I need. I'll start with the second question first, I'm going to need the Snapchat API for the login with Snapchat and share to story features. I will later implement Google's Firebase API for notifications as well.<br>Returning to the first question, I could decide to make this all in Javascript and make it mainly client-side apart from a database with the responses, but I decided to go with Python, for the simple reason that I feel more comfortable with it. I will be using Flask for the web part of it.</p>
+      <p>A great idea is nothing without a plan, so here is what I want to do:</p>
+      <ol>
+        <li>Create a simple site that creates a custom image and allows you to share it to your story as a sticker.</li>
+        <li>Add login with Snapchat and allow you to view your previous "ask me anything"s.</li>
+        <li>Extend this and also add a link to the story, the page it sends you to allowing you to anonymously send a message.</li>
+        <li>Show the creator all the responses, allowing them to reply to any on their story and marking them as done when done so.</li>
+        <li>Smooth out any bugs and release to the public!</li>
+      </ol>
+      <p>So, let's get started!</p>
+      <hr>
+      <h3>1. Create a simple site that creates a custom image and allows you to share it to your story as a sticker.</h3>
+      <p>To begin with I decided to create a Python script that generates an image with some specified text on it. I spent some time making the following base sticker:</p>
+      <img src="img/sendit-1.png">
+      <p>With this names as question.png, I made the following code:</p>
+      <code>
+        from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw 
+
+# Open base image
+img = Image.open("question.png")
+draw = ImageDraw.Draw(img)
+
+# Write text on image
+font = ImageFont.truetype("Poppins-Regular.ttf", 20)
+draw.text((120, 42),"Sample Text",(255,255,255),font=font)
+
+# Save file
+img.save('newquestion.png')
+
+      </code>
+      <!-- ####################################################################################################### -->
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div id="pgfooter"></div>
+<script src="../footer.js"></script>
+</body>
+</html>
