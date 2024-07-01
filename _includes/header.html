@@ -1,0 +1,10 @@
+<div id="header">
+    <h1>fancyfinn9</h1>
+  <nav>
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" {% if page.url == item.link %}style="color: white;"{% endif %}>
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </nav>
+</div>
