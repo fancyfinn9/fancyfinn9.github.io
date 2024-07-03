@@ -3,3 +3,5 @@
 	url = https://github.com/fancyfinn9/website-posts
 [submodule "https://github.com/fancyfinn9/website-posts"]
 	url = _posts
+[submodule "https://github.com/fancyfinn9/website-posts.git"]
+	url = _posts
