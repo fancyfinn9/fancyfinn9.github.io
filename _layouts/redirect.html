@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<h1>Redirect</h1>
+<h2>{{ page.title }}</h2>
+
+<p>Redirecting you to <a href="{{ page.link }}">{{ page.link }}</a> ...</p>
+
+<p>If nothing is happening, click on the link above, or copy it and paste it into the URL bar.</p>
+
+{{ content }}
+
+<script>
+    window.location.href = "{{ page.link }}";
+</script>
