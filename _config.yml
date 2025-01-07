@@ -1,2 +1,7 @@
 include:
   - .well-known
+collections:
+  accf:
+    output: true
+    permalink: /wiki/:slug/
+    layout: wiki
