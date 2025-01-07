@@ -3,7 +3,7 @@ layout: base
 ---
 <div id="content">
     <h1>{{ page.title }}</h1>
-    <p>Last modified at {{ page.mtime | date: "%B %d, %Y at %I:%M %p" }}</p>
+    <p>Last modified at {% last_modified_at %}</p>
 
     {{ content }}
 </div>
