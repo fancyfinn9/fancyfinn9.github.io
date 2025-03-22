@@ -31,6 +31,10 @@ p {
 	font-size: 16px;
 }
 
+li {
+	font-size: 16px;
+}
+
 a, a:hover {
 	color: #ffffff;
 }
@@ -107,4 +111,24 @@ table, th, td {
 th, td {
 	padding: 8px;
 	text-align: left;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    gap: 20px;  /* Adds space between images */
+}
+
+.contact_image-box {
+    text-align: center; /* Centers the text below each image */
+}
+
+.contact_image-box i {
+    font-size: 50px;
+}
+
+.contact_image-box p {
+    margin-top: 5px;
+    font-size: 14px;
 }
