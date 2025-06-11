@@ -16,9 +16,9 @@ Don't be afraid to message me on one service to let me know that you wrote on a 
 
 <div class="contact_container">
     <div class="contact_image-box">
-        <a href="https://donphan.social/@fancyfinn9">
+        <a href="https://theres.life/@fancyfinn9">
             <i class="fa-brands fa-mastodon" style="color: #7547ff;"></i>
-            <p>Mastodon<br>@fancyfinn9@donphan.social</p>
+            <p>Mastodon<br>@fancyfinn9@theres.life</p>
         </a>
     </div>
     <div class="contact_image-box">
@@ -64,7 +64,8 @@ Don't be afraid to message me on one service to let me know that you wrote on a 
 
 <h3><div id="xmpp">*</div></h3>
 For XMPP with OMEMO, I only use the following keys:  
-- Desktop (Gajim): ffcba25b 98b533a7 297ad062 3cda6a30 f746d3eb 662c98e8 7b94a831 05085d30  
-- Mobile (monocles): 0b447f2d 9236854d 84612187 d5585d2c 14ebe31f 32412780 fe15e2a8 a83b0c10
+- Desktop (Gajim): 54DEB15F 9A8C029A 8F7DD0A9 6F0E8030 1E74AA79 24F0A16B 0CF7FEFA 06E95013
+- Mobile (monocles): 659759de 44def749 8b54faae 70ea9bcf afc11839 0cb5940a bea3f925 3b6bca6a
 
 If I for some reason must use another key, I will share it using one of the keys above first.
+_(Last updated: 11/June/2025 @ 9:47AM, upon getting a new laptop.)_
