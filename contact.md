@@ -62,10 +62,23 @@ Don't be afraid to message me on one service to let me know that you wrote on a 
 
 ---
 
-<h3><div id="xmpp">*</div></h3>
+<h2>Encryption</h2><br>
+<h3 id="xmpp">XMPP (OMEMO)</h3>
 For XMPP with OMEMO, I only use the following keys:  
 - Desktop (Gajim): 54DEB15F 9A8C029A 8F7DD0A9 6F0E8030 1E74AA79 24F0A16B 0CF7FEFA 06E95013
 - Mobile (monocles): 659759de 44def749 8b54faae 70ea9bcf afc11839 0cb5940a bea3f925 3b6bca6a
 
 If I for some reason must use another key, I will share it using one of the keys above first.
 _(Last updated: 11/June/2025 @ 9:47AM, upon getting a new laptop.)_
+
+<h3 id="pgp">PGP</h3>
+My PGP public key can be downloaded here: [PGP key](/files/fancyfinn9.asc)\
+The following information about my key has also been signed and can be downloaded here: [Information about my key (signed)](/files/keyinformation.txt.asc)
+
+Name: fancyfinn9
+Email: fancyfinn9@proton.me
+
+Fingerprint:
+8EA4 21D9 3B90 7C76 E71A  157F 39A9 BF1B D2F3 0464
+
+The key was created on the 20th of June 2025, and is currently set to never expire.
