@@ -75,7 +75,7 @@ _(Last updated: 11/June/2025 @ 9:47AM, upon getting a new laptop.)_
 My PGP public key can be downloaded here: [PGP key](/files/fancyfinn9.asc)\
 The following information about my key has also been signed and can be downloaded here: [Information about my key (signed)](/files/keyinformation.txt.asc)
 
-Name: fancyfinn9
+Name: fancyfinn9\
 Email: fancyfinn9@proton.me
 
 Fingerprint:
